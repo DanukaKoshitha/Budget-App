@@ -35,6 +35,31 @@ ol li{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+#input{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+}
+
+#btn{
+  background-color: rgb(24, 170, 24);
+  padding: 10px;
+}
+
+#btn:hover{
+  background-color: rgb(126, 249, 4);
+}
+
+#btnUndo{
+  background-color: rgb(24, 170, 24);
+  padding: 10px;
+}
+
+#btnUndo:hover{
+  background-color: rgb(126, 249, 4);
+}
+
 #firstRow {
   margin-top: 2rem;
   display: flex;
@@ -65,12 +90,4 @@ progress {
   appearance: none;
 }
 
-progress::-webkit-progress-bar {
-  background: #e6e6e6;
-  border-radius: 8px;
-}
 
-progress::-webkit-progress-value {
-  background: #007bff;
-  border-radius: 8px;
-}
