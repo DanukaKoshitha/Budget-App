@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header>
+        <h1>Budget Tracker Dashboard</h1>
+      </header>
+
+      <ul>
+        <li>Logout ↪</li>
+        <li>CashFolw</li>
+        <li>Budget</li>
+        <li>OverView</li>
+      </ul>
+
+      <br><br><br>
+
+      <div id="firstRow">
+        <div id="chart">
+          <h2>Expense categories</h2>
+          <canvas id="pieChart"></canvas>
+        </div>
+        <div id="chart">
+          <h2>Monthly spending</h2>
+          <canvas id="lineChart"></canvas>
+        </div>
+      </div>
+
+      <div id="SecondRow">
+        <div id="chart">
+          <h2>Savings goals progress</h2>
+          <div id="savingProgress">
+            <p>Goal : $5000</p>
+            <p>Saved : $2000</p>
+            <progress value="2000" max="5000"></progress>
+          </div>
+        </div>
+
+        <div id="chart">
+          <h2>Recent Transactions</h2>
+          <div id="transaction">
+            <ol>
+              <li>Groceries - $50</li>
+              <li>Electrictiy - $90</li>
+              <li>Subcription - $10</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
