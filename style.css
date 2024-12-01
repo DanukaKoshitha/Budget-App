@@ -1,93 +1,180 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: black;
+  color: white;
 }
 
-header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 1rem 2rem;
+html{
+    scroll-behavior: smooth;
+}
+
+.topic {
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
 }
-
-.dashboard {
-  padding: 2rem;
+.logo {
+  font-size: 30px;
+  margin-left: 3%;
 }
-
-ul li{
+.list{
+    margin-right: 3%;
+}
+.list ul li{
   list-style: none;
-  margin: 10px;
-  background-color: aquamarine;
-  padding: 20px;
-  border-radius: 30px;
   float: right;
+  margin-right: 35px;
+  font-size: 20px;
+}
+.navigetion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-ul li:hover{
-  background-color: bisque;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+  }
+  
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: crimson;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+
+.row1{
+    display: flex;
+    grid-gap: 2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.col-1{
+    background:rgb(30, 31, 31);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-ol li{
-  margin: 20px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.table{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 2rem;
+    width: 100%;
+}
+.presentage{
+    margin-right: 30%;
+}
+.presentage p{
+    padding: 10px;
+    font-size: 15px;
 }
 
-#input{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin: 20px;
+.items{
+    margin-left: 20%;
 }
 
-#btn{
-  background-color: rgb(24, 170, 24);
-  padding: 10px;
+.items ul li{
+    list-style: none;
+    padding: 15px;
+    font-size: 18px;
 }
 
-#btn:hover{
-  background-color: rgb(126, 249, 4);
+.chart{
+    margin: 2%;
 }
 
-#btnUndo{
-  background-color: rgb(24, 170, 24);
-  padding: 10px;
+.lbl1{
+    display: flex;
+    margin-left: 30%;
+}
+#month{
+    padding: 10px;
+    background-color: rgb(30, 30, 153);
+    border: none;
+    color: white;
+}
+#btnSend{
+    width: 60px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: brown;
+    border-radius: 10px;
+}
+.expends{
+    text-align: center;
+    margin: 45px;
 }
 
-#btnUndo:hover{
-  background-color: rgb(126, 249, 4);
+.spends{
+    text-align: center;
 }
 
-#firstRow {
-  margin-top: 2rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+.setValue1{
+    display: flex;
+    margin-left: 20%;
+    padding: 3%;
+    width: 700px;
+    font-size: 15px;
 }
-
-#SecondRow {
-  display: flex;
-  gap: 2rem;
-}
-
-#chart {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-#chart h2 {
-  margin-top: 0;
-}
-
-progress {
-  width: 100%;
-  height: 20px;
-  appearance: none;
+#cashinNum{
+    margin-left: 50px;
+    padding: 10px;
+    background-color: darkslateblue;
+    color: white;
 }
 
 
+.setValue2{
+    display: flex;
+    margin-left: 50%;
+    padding: 3%;
+    width: 700px;
+    font-size: 15px;
+}
+#cashoutNum{
+    margin-right: 50px;
+    font-size: 18px;
+}
+#btnCashIn{
+    margin-left: 40%;
+    width: 20%;
+    padding: 10px;
+    background-color: cyan;
+    border-radius: 20px;
+}
+#inputAmount{
+    margin-left: 50px;
+    padding: 10px;
+    background-color: darkslateblue;
+    color: white;
+}
+#inputCategory{
+    padding: 10px;
+    background-color: darkslateblue;
+    color: white;
+    margin-right: 50px;
+}
+#btnCashOut{
+    margin-left: 40%;
+    width: 20%;
+    padding: 10px;
+    background-color: cyan;
+    border-radius: 20px;
+}

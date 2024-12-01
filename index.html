@@ -1,71 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="dashboard">
-      <header>
-        <h1>Budget Tracker Dashboard</h1>
-      </header>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
 
-      <ul>
-        <li><input type="button" value="Logout" id="Logout ↪" style="background-color: bisque;"></li>
-        <li><input type="button" value="CashFolw" id="CashFolw" style="background-color: bisque;"></li>
-        <li><input type="button" value="Budget" id="Budget" style="background-color: bisque;"></li>
-        <li><input type="button" value="OverView" id="OverView" style="background-color: bisque;"></li>
-      </ul>
-
-      <br><br><br>
-
-      <div id="input">
-        
-      <input type="number" placeholder="Amount" id="amount" style="margin-right: 40px;">
-      <input type="text" placeholder="Select Category" id="category" style="margin-right: 40px;">
-      <input type="date" name="" id="date" style="margin-right: 40px;">
-      <input type="button" value="Add Expence" id="btn" >
-      <input type="button" value="Undo" id="btnUndo">
-      </div>
-
-      <div id="firstRow">
-        <div id="chart">
-          <h2>Expense categories</h2>
-          <canvas id="pieChart"></canvas>
-        </div>
-        <div id="chart">
-          <h2>Monthly spending</h2>
-          <canvas id="lineChart"></canvas>
-        </div>
-      </div>
-
-      <div id="SecondRow">
-        <div id="chart">
-          <h2>Savings goals progress</h2>
-          <div id="savingProgress">
-            <p>Goal : $5000</p>
-            <p>Saved : $2000</p>
-            <progress value="2000" max="5000"></progress>
-          </div>
+        <div class="container">
+            <div class="topic">
+                <h1>Budget Tracker</h1>
+            </div>
         </div>
 
-        <div id="chart">
-          <h2>Recent Transactions</h2>
-          <div id="transaction">
-            <ol>
-              <li>Groceries - $50</li>
-              <li>Electrictiy - $90</li>
-              <li>Subcription - $10</li>
-            </ol>
-          </div>
+        <nav class="navigetion">
+            <div class="logo">
+                <h3><samp style="color: #ff004f;">KDK</samp>.</h3>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="#cashOut">CashOut</a></li>
+                    <li><a href="#cashIn">CashIn</a></li>
+                    <li><a href="#header">Overview</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="chart">
+            
+            <!-- ////////////////////// -->
+
+                <div class="row1">
+                    <div class="col-1">
+                        <div style="height: 400px; margin-left: 18%;">
+                            <canvas id="pieChart" ></canvas>
+                          </div>
+                    </div>
+                    <div class="col-1">
+                        <h2 style="color: #ff004f;">Expences</h2>
+                        <div class="table">
+
+                            <div class="items">
+                                <ul>
+                                    <li>Groceries</li>
+                                    <li>Bils</li>
+                                    <li>Helth</li>
+                                    <li>Transport</li>
+                                    <li>Shopping</li>
+                                    <li>Other</li>
+                                </ul>
+                            </div>
+
+                            <div class="presentage">
+                                <p id="1">0%</p>
+                                <p id="2">0%</p>
+                                <p id="3">0%</p>
+                                <p id="4">0%</p>
+                                <p id="5">0%</p>
+                                <p id="6">0%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ///////////////////// -->
+
+                <div class="row1">
+                    <div class="table">
+                        <div class="col-1">
+                            <h2 style="color: #ff004f;"> Spends</h2>
+                            <div class="lbl1">
+                                <input type="text" placeholder="Month" id="month">
+                                <input type="button" value="send" id="btnSend">
+                            </div>
+                            <div class="expends">
+                                <h3>Expends <samp style="color: #ff004f;">(LKR)</samp> :</h3>
+                                <p id="setExpends">5000</p>
+                            </div>
+                            <div class="spends">
+                                <h3>Sepends <samp style="color: #ff004f;">(LKR)</samp> :</h3>
+                                <p id="setSpends">12000</p>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div>
+                                <canvas id="barChart"></canvas>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
         </div>
-      </div>
+
+    </div>
+    
+    <!-- //////////////////////////////    Cash In       /////////////////////////// -->
+    
+
+    <div id="cashIn">
+        <div class="chart">
+            <h1 style="text-align: center;padding: 15px;font-size: 40px;">Cash In</h1>
+
+            <div class="setValue1">
+                <h3>Income <samp style="color: #ff004f;">(LKR)</samp> : </h3>
+                <input type="number"  id="cashinNum">
+            </div>
+
+            <div class="setValue2">
+                
+                <p id="cashoutNum">0.0</p>
+                <h3>:  Full Amount  <samp style="color: #ff004f;">(LKR)</samp> </h3>
+            </div>
+
+            <input type="button" value="Cash In" id="btnCashIn">
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="app.js"></script>
-  </body>
+    <!-- ///////////////////////      Cash Out      //////////////////// -->
+
+
+    <div id="cashOut">
+        <div class="chart">
+            <h1 style="text-align: center;padding: 15px;font-size: 40px;">Cash Out</h1>
+
+            <div class="setValue1">
+                <h3>Amount <samp style="color: #ff004f;">(LKR)</samp> : </h3>
+                <input type="number"  id="inputAmount">
+            </div>
+
+            <div class="setValue2">
+                
+                <input type="text" name="" id="inputCategory">
+                <h3>:  Category</h3>
+            </div>
+
+            <input type="button" value="Cash Out" id="btnCashOut">
+
+        </div>
+    </div>
+    
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+    <script src="main.js"></script>
+</body>
 </html>
